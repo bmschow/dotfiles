@@ -1,5 +1,4 @@
 #! /bin/sh
-git clone --bare https://github.com/bmschow/dotfiles.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
