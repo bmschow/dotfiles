@@ -2,7 +2,7 @@
 install by running 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare https://github.com/bmschow/dotfiles.git $HOME/.cfg
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
