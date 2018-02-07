@@ -48,3 +48,9 @@ filetype plugin indent on    " required
 colorscheme peachpuff
 syntax on
 set background=dark
+set number
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" enable mouse scroll
+set mouse=a
