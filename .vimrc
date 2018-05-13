@@ -54,3 +54,8 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " enable mouse scroll
 set mouse=a
+
+" set paste toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
