@@ -1,6 +1,15 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" set tags
+set tags=tags
+
+" set wildignore to ignore files we never want to open
+set wildignore=*.swp,*.pyc,*.pdf,*.pyo,*.zip
+
+" set runtime path to include ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -18,19 +27,26 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
+"
+"Install nerd commenter
+Plugin 'scrooloose/nerdcommenter'
 
 " vim-tmux-navigator
 Bundle 'christoomey/vim-tmux-navigator'
 
+" jedi-vim python autocomplete
+Plugin 'davidhalter/jedi-vim'
+
 " All of your Plugins must be added before the following line
+filetype on
+filetype plugin on
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -59,3 +75,6 @@ set mouse=a
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" set CtrlPTag to Ctrl + r
+nnoremap <leader>. :CtrlPTag<cr>
