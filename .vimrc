@@ -4,6 +4,9 @@ filetype off                  " required
 " set tags
 set tags=tags
 
+" ctrlp only search under directory in which it was opened
+let ctrlp_working_path_mode=0
+
 " set wildignore to ignore files we never want to open
 set wildignore=*.swp,*.pyc,*.pdf,*.pyo,*.zip
 
